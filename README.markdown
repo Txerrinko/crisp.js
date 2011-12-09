@@ -19,7 +19,7 @@ var button = crisp.create({innerHTML: 'click me'});
 var button = crisp.create({innerHTML: 'click me'});
 document.getElementById('foo').appendChild(button);
 ```
-###Build a fricken button and configure it like hell
+###Build a fricken button using all config options
 ```console
 var args = {
 innerHTML: 'gordon',	// button text
