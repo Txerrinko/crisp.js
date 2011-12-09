@@ -13,7 +13,7 @@ function create(args){
 	var color = (args.color) ? args.color : 'white';
 	var bgColor = (args.bgColor) ? args.bgColor : '#56ba4a';
 	var fontSize = (args.fontSize) ? args.fontSize : '24px'; 
-	var fontFace = (args.fontFace) ? args.fontFace : "'Amaranth', sans-serif"; 
+	var fontFamily = (args.fontFamily) ? args.fontFamily : "'Amaranth', sans-serif"; 
 	button.style.cssText = "display: inline-block;"
 		+"background: "+bgColor+";"
 		+"color: "+color+";"
@@ -23,7 +23,7 @@ function create(args){
 		+"margin:5px;"
 		+"line-height:"+height+";text-align: center;text-decoration: none;cursor:hand;cursor:pointer;"
 		+"overflow:hidden;text-shadow: 1px 1px 1px #59a24f;position:relative;border-radius: 5px;"
-		+"font-family: "+fontFace+";-moz-user-select: none;-khtml-user-select: none;top:0px;left:0px;"
+		+"font-family: "+fontFamily+";-moz-user-select: none;-khtml-user-select: none;top:0px;left:0px;"
 	   	+"user-select: none;box-shadow: 2px 2px 2px rgba(0,0,0,0.5);";
 	button.setAttribute("down", "false");
 	//listen / add

@@ -14,16 +14,28 @@
 			sexy css3 buttons with one line of js
 		</div>
 		<div id="demo">
-			<span class="examples">Examples</span><span class="features">Features</span>
+			<span class="examples">Examples</span><span class="features">Features</span><br>
 			<div id="demoHolder"></div>
+			<div id="featureHolder">
+				<ul>
+					<li>No extenral images, widgets, or css</li>
+					<li>Compatible with all JS frameworks</li>
+					<li>Easily customizable</li>
+					<li>Use just like any other node</li>
+					<li>No more styling ugly framework buttons</li>
+					<li><a href="http://sam.zoy.org/wtfpl/" target="_blank">WTFPL</a> license</li>
+			</div>
 		</div>
 		<div id="usage">
 			<span class="examples">Usage</span><br>
-			Using minimum config options
+			Build a fricken button
+			<pre class="prettyprint code">
+var button = crisp.create({innerHTML: 'click me'});</pre>
+			Build a fricken button and place it in the DOM
 			<pre class="prettyprint code">
 var button = crisp.create({innerHTML: 'click me'});
-document.getElementById('foo').appendChild(button)</pre>
-			Using all config options
+document.getElementById('foo').appendChild(button);</pre>
+			Build a fricken button and configure it like hell
 			<pre class="prettyprint code">
 var args = {
 	innerHTML: 'gordon',	// button text
@@ -31,11 +43,11 @@ var args = {
 	height: '40px',		// button height
 	color: '#FF0022',	// text color
 	bgColor: 'green',	// background color
-	fontFace: 'Arial',	// font face
+	fontFamily: 'Arial',	// font face
 	fontSize: '20px'	// font size
 }
-var button = crisp.create(args);
-document.getElementById('foo').appendChild(button);</pre>
+var button = crisp.create(args);</pre>
+		A button is just a regular element. To change its look or feel more than the in the example above, just create it and style it like you would any other element. Same goes for registering event handlers and positioning.
 		</div>
 		<script>
 			var node = document.getElementById('demoHolder');
@@ -52,7 +64,7 @@ document.getElementById('foo').appendChild(button);</pre>
 				bgColor:'#FF6600',
 				width:'110px',
 				height:'40px',
-				fontFace:'Impact'
+				fontFamily:'Impact'
 			});
 			crisp.create({
 				domNode:node,
@@ -60,7 +72,7 @@ document.getElementById('foo').appendChild(button);</pre>
 				bgColor:'#660088',
 				width:'64px',
 				height:'40px',
-				fontFace: 'Times'
+				fontFamily: 'Times'
 			});
 			node.appendChild(document.createElement('br'));
 			crisp.create({
@@ -69,7 +81,7 @@ document.getElementById('foo').appendChild(button);</pre>
 				bgColor:'#FF0022',
 				width:'110px',
 				height:'40px',
-				fontFace:'Courier'
+				fontFamily:'Courier'
 			});
 			crisp.create({
 				domNode:node,
