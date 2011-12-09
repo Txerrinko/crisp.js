@@ -25,6 +25,8 @@ function create(args){
 	var bgColor = (args.bgColor) ? args.bgColor : '#56ba4a';
 	var fontSize = (args.fontSize) ? args.fontSize : '24px'; 
 	var fontFamily = (args.fontFamily) ? args.fontFamily : "'Amaranth', sans-serif"; 
+	var paddingSides = (args.width) ? '' : '5px';
+	var paddingTop = (args.height) ? '' : '5px';
 	button.style.cssText = "display: inline-block;"
 		+"background: "+bgColor+";"
 		+"color: "+color+";"
@@ -32,11 +34,14 @@ function create(args){
 		+"height: "+height+";"
 		+"width: "+width+";"
 		+"margin:5px;"
+		+"padding-left:"+paddingSides+";"
+		+"padding-right:"+paddingSides+";"
+		+"padding-top:"+paddingTop+";"
+		+"padding-bottom:"+paddingTop+";"
 		+"line-height:"+height+";text-align: center;text-decoration: none;cursor:hand;cursor:pointer;"
 		+"overflow:hidden;text-shadow: 1px 1px 1px #59a24f;position:relative;border-radius: 5px;"
 		+"font-family: "+fontFamily+";-moz-user-select: none;-khtml-user-select: none;top:0px;left:0px;"
 	   	+"user-select: none;box-shadow: 2px 2px 2px rgba(0,0,0,0.5);";
-	
 	//3. Listen, and  add to DOM if domNode provided
 	button.setAttribute("down", "false");
 	button.addEventListener('mousedown',onMouseDown);
