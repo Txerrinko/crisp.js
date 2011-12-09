@@ -1,0 +1,135 @@
+<html>
+  	<head>
+		<title>mfb.js</title>
+		<meta content="sexy css3 buttons with one line of js." name="description" />
+		<link href="http://fonts.googleapis.com/css?family=Amaranth:400,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="demo/demo.css" type="text/css" />
+		<link href="demo/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="demo/google-code-prettify/prettify.js"></script>
+		<script src="crisp.js"></script>
+  	</head>
+	<body onload="prettyPrint()">
+		<div class="title">crisp.js</div>
+		<div class="subtitle">
+			sexy css3 buttons with one line of js
+		</div>
+		<div id="demo">
+			<span class="examples">Examples</span><span class="features">Features</span>
+			<div id="demoHolder"></div>
+		</div>
+		<div id="usage">
+			<span class="examples">Usage</span><br>
+			Using minimum config options
+			<pre class="prettyprint code">
+var button = crisp.create({innerHTML: 'click me'});
+document.getElementById('foo').appendChild(button)</pre>
+			Using all config options
+			<pre class="prettyprint code">
+var args = {
+	innerHTML: 'gordon',	// button text
+	width: '100px',		// button width
+	height: '40px',		// button height
+	color: '#FF0022',	// text color
+	bgColor: 'green',	// background color
+	fontFace: 'Arial',	// font face
+	fontSize: '20px'	// font size
+}
+var button = crisp.create(args);
+document.getElementById('foo').appendChild(button);</pre>
+		</div>
+		<script>
+			var node = document.getElementById('demoHolder');
+			//gordon freeman lives on
+			crisp.create({
+				domNode:node,
+				innerHTML:'gordon',
+				width:'100px',
+				height:'40px'
+			});
+			crisp.create({
+				domNode:node,
+				innerHTML:'freeman',
+				bgColor:'#FF6600',
+				width:'110px',
+				height:'40px',
+				fontFace:'Impact'
+			});
+			crisp.create({
+				domNode:node,
+				innerHTML:'has',
+				bgColor:'#660088',
+				width:'64px',
+				height:'40px',
+				fontFace: 'Times'
+			});
+			node.appendChild(document.createElement('br'));
+			crisp.create({
+				domNode:node,
+				innerHTML:'escaped',
+				bgColor:'#FF0022',
+				width:'110px',
+				height:'40px',
+				fontFace:'Courier'
+			});
+			crisp.create({
+				domNode:node,
+				innerHTML:'black',
+				bgColor:'black',
+				width:'80px',
+				height:'40px',
+			});
+			crisp.create({
+				domNode:node,
+				innerHTML:'mesa.',
+				bgColor:'white',
+				width:'85px',
+				height:'40px',
+				color:'black'
+			});
+			node.appendChild(document.createElement('br'));
+			crisp.create({
+				domNode:node,
+				innerHTML:'BIG',
+				width:'148px',
+				height:'100px',
+				fontSize:'65px'
+			});
+			crisp.create({
+				domNode:node,
+				innerHTML:'small',
+				width:'39px',
+				height:'20px',
+				fontSize:'12px',
+				bgColor:'#CC33AA'
+			}).style.top = '-59px';
+			crisp.create({
+				domNode:node,
+				innerHTML:'small',
+				width:'39px',
+				height:'20px',
+				fontSize:'12px',
+				bgColor:'#CC0011'
+			}).style.top = '-59px';
+			crisp.create({
+				domNode:node,
+				innerHTML:'small',
+				width:'39px',
+				height:'20px',
+				fontSize:'12px',
+				bgColor:'grey'
+			}).style.top = '-59px';
+			node.appendChild(document.createElement('br'));
+			var one = crisp.create({
+				domNode:node,
+				innerHTML:'small',
+				width:'137px',
+				height:'73px',
+				fontSize:'12px',
+				bgColor:'#3366FF'
+			});
+			one.style.top = '-83px';
+			one.style.left = '158px';
+		</script>
+		<a href="http://github.com/bouchon/crisp.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="demo/fork.png" alt="Fork me on GitHub"></a>
+  	</body>
+</html>
