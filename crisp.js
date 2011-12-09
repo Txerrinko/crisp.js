@@ -1,13 +1,24 @@
+/**
+* Crisp.js
+* logicalcognition.com/crisp.js
+* Paul Bouchon
+*/
 window.crisp = this;
 this.loadStyles(['http://fonts.googleapis.com/css?family=Amaranth']);
 
+/**
+* Creates a button
+*/
 function create(args){
 	if(!args)
 		var args = {};
+		
+	//1. Build container
 	var button = document.createElement('div');
 	button.innerHTML = (args.innerHTML) ? args.innerHTML : 'hello<br>world';
 	button.className = 'button';
-	//1. Style div
+	
+	//2. Style with args / defaults
 	var width = (args.width) ? args.width : '';
 	var height = (args.height) ? args.height : '';
 	var color = (args.color) ? args.color : 'white';
@@ -25,19 +36,20 @@ function create(args){
 		+"overflow:hidden;text-shadow: 1px 1px 1px #59a24f;position:relative;border-radius: 5px;"
 		+"font-family: "+fontFamily+";-moz-user-select: none;-khtml-user-select: none;top:0px;left:0px;"
 	   	+"user-select: none;box-shadow: 2px 2px 2px rgba(0,0,0,0.5);";
+	
+	//3. Listen, and  add to DOM if domNode provided
 	button.setAttribute("down", "false");
-	//listen / add
 	button.addEventListener('mousedown',onMouseDown);
 	button.addEventListener('mouseup',onMouseUp);
 	button.addEventListener('mouseout',onMouseOut);
 	if(args.domNode)
 		args.domNode.appendChild(button);
+		
 	return button;
 }
 function onMouseOut(e){
-	if(e.target.getAttribute('down') == 'true'){
+	if(e.target.getAttribute('down') == 'true')
 		onMouseUp(e);
-	}
 }
 
 function onMouseDown(e){
@@ -73,10 +85,4 @@ function loadStyles(styles){
 	    e.media = "screen";
 	    document.getElementsByTagName("head")[0].appendChild(e);
 	}
-}
-
-function isElement(o){
-  	return (
-    typeof HTMLElement === "object" ? o instanceof HTMLElement : //DOM2
-    typeof o === "object" && o.nodeType === 1 && typeof o.nodeName==="string")
 }
