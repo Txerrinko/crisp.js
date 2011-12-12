@@ -33,3 +33,7 @@ fontSize: '20px'	// font size
 ```
 ###Further
 A button is just a regular element. To change its look or feel more than the in the example above, just create it and style it like you would any other element. Same goes for registering event handlers and positioning.
+
+##License
+
+WTFPL
