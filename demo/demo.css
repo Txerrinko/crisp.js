@@ -38,27 +38,26 @@ body{
 	font: 28px 'Amaranth', sans-serif;
 	font-weight:bold;
 	position:relative;
-	left:220px;
+	left:255px;
 }
 
 #demo{
 	margin-top:30px;
-	width:605px;
+	width:650px;
 	margin-left:auto;
 	margin-right:auto;
 }
 
 #usage{
 	position:relative;
-	width:605px;
+	width:650px;
 	margin-left:auto;
 	margin-right:auto;
-	top:-60px;
 	font-size:18px;
 }
 
 #demoHolder{
-	width:305px;
+	width:350px;
 	display:inline-block;
 }
 
@@ -66,7 +65,7 @@ body{
 	width:290px;
 	display:inline-block;
 	position:relative;
-	top:-100px;
+	top:-15px;
 	line-height:20px;
 	font-size:14px;
 }
